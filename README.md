@@ -22,7 +22,7 @@ pod 'MCAssetExportSession'
 
 ## Author
 
-dongxiao, 734692659@qq.com
+dongxiao, 734692659@qq.com, dx
 
 ## License
 
