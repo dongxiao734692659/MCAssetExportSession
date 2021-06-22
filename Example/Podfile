@@ -1,0 +1,6 @@
+use_frameworks!
+target 'MCAssetExportSession_Tests' do
+  pod 'MCAssetExportSession', :path => '../'
+  
+  
+end
