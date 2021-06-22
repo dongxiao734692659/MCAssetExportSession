@@ -1,0 +1,6 @@
+framework module MCAssetExportSession {
+  umbrella header "MCAssetExportSession-umbrella.h"
+
+  export *
+  module * { export * }
+}

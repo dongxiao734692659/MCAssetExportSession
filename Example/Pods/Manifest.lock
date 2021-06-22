@@ -1,0 +1,16 @@
+PODS:
+  - MCAssetExportSession (0.1.0)
+
+DEPENDENCIES:
+  - MCAssetExportSession (from `../`)
+
+EXTERNAL SOURCES:
+  MCAssetExportSession:
+    :path: "../"
+
+SPEC CHECKSUMS:
+  MCAssetExportSession: 61f809ae955ba2ff9b2b6c93759de284f29556ce
+
+PODFILE CHECKSUM: 569a79f95ffad021c4130dd9dfbebe9435378448
+
+COCOAPODS: 1.10.1

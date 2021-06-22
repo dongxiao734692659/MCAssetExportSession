@@ -1,0 +1,6 @@
+framework module Pods_MCAssetExportSession_Tests {
+  umbrella header "Pods-MCAssetExportSession_Tests-umbrella.h"
+
+  export *
+  module * { export * }
+}
