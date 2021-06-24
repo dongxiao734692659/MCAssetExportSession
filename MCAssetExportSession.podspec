@@ -8,10 +8,10 @@
 
 Pod::Spec.new do |s|
   s.name             = 'MCAssetExportSession'
-  s.version          = '0.1.0'
+  s.version          = '0.1.1'
   s.summary          = 'A short description of MCAssetExportSession.'
 
-# This description is used to generate tags and improve search results.
+# This description is used to g0nerate tags and improve search results.
 #   * Think: What does it do? Why did you write it? What is the focus?
 #   * Try to keep it short, snappy and to the point.
 #   * Write the description between the DESC delimiters below.
