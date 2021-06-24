@@ -9,6 +9,7 @@
 
 To run the example project, clone the repo, and run `pod install` from the Example directory first.
 
+示例代码
 
 func encodeVideoWithURL(videoURL: URL) {
     let asset = AVURLAsset(url: videoURL)
