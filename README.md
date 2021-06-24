@@ -11,25 +11,26 @@ To run the example project, clone the repo, and run `pod install` from the Examp
 
 示例代码
 
-func encodeVideoWithURL(videoURL: URL) {
-    let asset = AVURLAsset(url: videoURL)
-    let outPath = URL(fileURLWithPath: self.createFile(name: self.fileName()))
-    encoder = MCAssetExportSession(asset: asset, preset: .MCAssetExportSessionPreset720P)
-    encoder.delegate = self
-    encoder.outputFileType = AVFileType.mp4
-    encoder.outputURL = outPath
+    // 调用方法
+    func encodeVideoWithURL(videoURL: URL) {
+        let asset = AVURLAsset(url: videoURL)
+        let outPath = URL(fileURLWithPath: self.createFile(name: self.fileName()))
+        encoder = MCAssetExportSession(asset: asset, preset: .MCAssetExportSessionPreset720P)
+        encoder.delegate = self
+        encoder.outputFileType = AVFileType.mp4
+        encoder.outputURL = outPath
+        print("The compressed file size is about \(encoder.estimatedExportSize!/1000.0)MB")
     
-    print("The compressed file size is about \(encoder.estimatedExportSize!/1000.0)MB")
-    
-    encoder.exportAsynchronouslyWithCompletionHandler {
-        if self.encoder.status == .completed {
-            print("Video export succeeded. video path: \(self.encoder.outputURL!)")
-            print("video size\(String(describing: self.encoder.outputURL?.relativePath.mc_fileSize))")
+        encoder.exportAsynchronouslyWithCompletionHandler {
+            if self.encoder.status == .completed {
+                print("Video export succeeded. video path: \(self.encoder.outputURL!)")
+                print("video size\(String(describing: self.encoder.outputURL?.relativePath.mc_fileSize))")
             ///1024.0/1024.0
-        } else if self.encoder.status == .cancelled {
-            print("export cancel")
-        } else {
-            print("export failed \(String(describing: self.encoder.error))")
+            } else if self.encoder.status == .cancelled {
+                print("export cancel")
+            } else {
+                print("export failed \(String(describing: self.encoder.error))")
+            }
         }
     }
     
